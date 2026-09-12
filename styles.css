@@ -447,7 +447,7 @@ footer {
 }
 footer .wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr auto auto;
   align-items: center;
   gap: 25px;
 }
@@ -458,6 +458,13 @@ footer small {
 footer span {
   display: flex;
   gap: 10px;
+}
+.site-credit a {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+.site-credit a:hover {
+  border-bottom-color: white;
 }
 @media (max-width: 800px) {
   .wrap {
