@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
   </head>
   <body>
     <header>
@@ -373,23 +373,32 @@
           </p>
           <a href="mailto:hello@instantdesk.tech">hello@instantdesk.tech ↗</a>
         </div>
-        <form id="lead">
+        <form
+          id="lead"
+          action="https://formsubmit.co/hello@instantdesk.tech"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New InstantDesk website enquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://natashafuji.github.io/instantdesk/thanks.html" />
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
           <div class="grid">
-            <label>Name<input required /></label
-            ><label>Work email<input required type="email" /></label
-            ><label>Company<input required /></label
+            <label>Name<input required name="Name" autocomplete="name" /></label
+            ><label>Work email<input required type="email" name="email" autocomplete="email" /></label
+            ><label>Company<input required name="Company" autocomplete="organization" /></label
             ><label
               >Website <em>Optional</em
-              ><input type="url" placeholder="https://"
+              ><input type="url" name="Website" placeholder="https://" autocomplete="url"
             /></label>
           </div>
           <label
             >What happens when you receive a new lead?<textarea
               required
+              name="Current lead process"
               rows="3"
             ></textarea></label
           ><label
-            >Approximate enquiries per month<select required>
+            >Approximate enquiries per month<select required name="Approximate enquiries per month">
               <option value="">Select a range</option>
               <option>1–20</option>
               <option>21–50</option>
@@ -397,19 +406,10 @@
               <option>100+</option>
             </select></label
           ><label
-            >Anything else we should know?<textarea rows="3"></textarea></label
-          ><button class="btn">See what InstantDesk could automate ↗</button
-          ><small>Preview mode: no information will be transmitted.</small>
+            >Anything else we should know?<textarea name="Message" rows="3"></textarea></label
+          ><label class="consent"><input type="checkbox" required name="Privacy consent" value="Yes" /> I agree that InstantDesk may use this information to respond to my enquiry. See the <a href="privacy.html">Privacy Policy</a>.</label>
+          <button class="btn" type="submit">See what InstantDesk could automate ↗</button>
         </form>
-        <div class="success" hidden>
-          <i>ϟ</i>
-          <h3>Thank you.</h3>
-          <p>
-            This preview form is not sending data yet. The live service will be
-            connected after approval.
-          </p>
-          <button>Return to form</button>
-        </div>
       </section>
     </main>
     <footer>

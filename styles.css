@@ -479,6 +479,31 @@ form .btn {
   background: var(--navy);
   color: white;
 }
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+}
+.consent {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.consent input {
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--navy);
+}
+.consent a {
+  font-weight: 700;
+  text-decoration: underline;
+}
 form > small {
   display: block;
   text-align: center;
@@ -573,6 +598,42 @@ footer span {
   background: white;
   border-radius: 5px;
   padding: 7px 10px;
+}
+.thank-you-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: var(--navy);
+}
+.thank-you-card {
+  width: min(620px, 100%);
+  padding: clamp(34px, 7vw, 70px);
+  border-radius: 10px;
+  background: #fdfcf9;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+.thank-you-card > img {
+  display: block;
+  width: min(210px, 70%);
+  margin-bottom: 60px;
+}
+.thank-you-card small {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #65667a;
+}
+.thank-you-card h1 {
+  margin: 18px 0 24px;
+  font-size: clamp(54px, 9vw, 86px);
+}
+.thank-you-card p {
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+.thank-you-card .btn {
+  background: var(--navy);
+  color: white;
 }
 @media (max-width: 800px) {
   .wrap {
