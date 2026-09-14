@@ -36,9 +36,9 @@ header {
   left: 0;
   z-index: 50;
   width: 100%;
-  color: white;
-  background: rgba(20, 20, 43, 0.88);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--navy);
+  background: rgba(253, 252, 249, 0.94);
+  border-bottom: 1px solid rgba(20, 20, 43, 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 8px 30px rgba(7, 7, 22, 0.12);
@@ -47,8 +47,12 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 23px;
-  font-weight: 700;
+  width: 178px;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .logo i,
 .success i {
@@ -86,6 +90,8 @@ nav a:hover {
 }
 .desktop {
   padding: 11px 15px;
+  background: var(--navy);
+  color: white;
 }
 .menu {
   display: none;
@@ -517,6 +523,12 @@ footer span {
 .site-credit a:hover {
   border-bottom-color: white;
 }
+.footer-logo {
+  width: 170px;
+  background: white;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
 @media (max-width: 800px) {
   .wrap {
     width: calc(100% - 32px);
@@ -532,7 +544,7 @@ footer span {
     margin-left: auto;
     border: 0;
     background: none;
-    color: white;
+    color: var(--navy);
     font-size: 25px;
   }
   nav {
