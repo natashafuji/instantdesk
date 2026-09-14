@@ -299,6 +299,57 @@ p {
   margin: 0;
   max-width: 650px;
 }
+.proof {
+  background: #f7f6f2;
+}
+.async-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 13px;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+.proof-intro {
+  max-width: 760px;
+  margin-top: 30px;
+}
+.proof-intro > small {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #65667a;
+}
+.proof-intro p {
+  max-width: 680px;
+  font-size: 18px;
+}
+.proof-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 55px;
+  border-top: 1px solid var(--line);
+}
+.proof-steps article {
+  padding: 30px 35px 10px 0;
+  margin-right: 35px;
+  border-right: 1px solid var(--line);
+}
+.proof-steps article:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.proof-steps span {
+  color: #8c8d9d;
+}
+.proof-steps h3 {
+  margin: 32px 0 10px;
+  font-size: 25px;
+}
+.proof-steps p {
+  margin-top: 0;
+}
 .demo {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -548,13 +599,18 @@ footer span {
   .title {
     margin-bottom: 38px;
   }
-  .cards {
+  .cards,
+  .proof-steps {
     grid-template-columns: 1fr;
   }
-  .cards article {
+  .cards article,
+  .proof-steps article {
     border-right: 0;
     border-bottom: 1px solid var(--line);
     margin: 0;
+  }
+  .proof-steps article:last-child {
+    border-bottom: 0;
   }
   .cards h3 {
     margin-top: 23px;
